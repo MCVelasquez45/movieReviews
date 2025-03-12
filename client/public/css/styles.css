@@ -1,0 +1,70 @@
+h1 {
+    color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+/* Responsive Movie Card */
+.card {
+    width: 100%; /* Makes sure it fits container */
+    max-width: 300px; /* Limits card width */
+    height: auto; /* Allow it to grow */
+    margin: 2em auto; /* Centers card */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Ensures image scales properly */
+.card-img-top {
+    height: 400px; /* Consistent image size */
+    object-fit: cover; /* Prevents distortion */
+}
+
+/* Card body styling */
+.card-body {
+    flex-grow: 1; /* Ensures content fills card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Prevents text overflow */
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Truncate overview text */
+.card-text {
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Ensures consistent layout on different screen sizes */
+@media (min-width: 576px) {
+    .card {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        max-width: 300px;
+    }
+}
